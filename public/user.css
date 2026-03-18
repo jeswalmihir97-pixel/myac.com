@@ -1,0 +1,50 @@
+/* Page background gradient */
+body {
+    background: linear-gradient(180deg, #000000, #0d1b2a, #03080c);
+    min-height: 100vh;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
+}
+
+/* Keep Navbar blue */
+.navbar {
+    background-color: #0d6efd !important; /* Bootstrap primary */
+}
+
+/* Do NOT touch .container globally (keeps layout spacing safe) */
+/* Only style .card and footer */
+
+/* Cards - dark theme */
+.card {
+    background-color: #111 !important;
+    color: #fff !important;
+    border: 1px solid #222;
+    border-radius: 12px;
+}
+
+/* Card body inherits dark */
+.card-body {
+    background-color: transparent !important;
+}
+.team-role {
+    color: #aaa; /* or #fff */
+    font-size: 0.9rem;
+}
+/* Forms inside dark cards */
+input, textarea, select {
+    background-color: #1a1a1a !important;
+    color: #fff !important;
+    border: 1px solid #444 !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #aaa !important;
+}
+
+/* Footer - dark with contrast */
+footer {
+    background-color: #000;
+    color: #0c0101;
+    border-top: 1px solid #222;
+}

@@ -1,0 +1,52 @@
+body {
+    background: url("https://t4.ftcdn.net/jpg/07/56/66/07/360_F_756660751_nRcfkXIkqFsIsWM8O3HfL7aZrHmzYYTb.jpg") no-repeat center center fixed;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+}
+
+.card {
+    margin-top: 100px;
+    border-radius: 12px;
+    background: rgba(0, 0, 0, 0.4); /* transparent black overlay */
+    color: #fff; /* white text */
+    box-shadow: none; /* no heavy box shadow */
+}
+
+.card-header {
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    background: transparent; /* fully transparent */
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.form-control {
+    background: rgba(255, 255, 255, 0.2); /* transparent inputs */
+    color: #fff;
+    border: 1px solid #ddd;
+}
+
+.form-control::placeholder {
+    color: #eee;
+}
+
+.form-control:focus {
+    background: rgba(200, 200, 200, 0.2) !important; /* gray transparent */
+    color: #fff; /* keep text white */
+    border-color: #aaa; /* softer border */
+    box-shadow: none; /* remove Bootstrap blue glow */
+}
+
+.btn-primary {
+    background-color: rgba(0, 123, 255, 0.8);
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: rgba(0, 86, 179, 0.9);
+}
+
+a {
+    color: #00ffff; /* aqua link for AC theme */
+}
