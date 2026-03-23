@@ -1,4 +1,4 @@
-@extends('layout.amaster')
+@extends('Layout.amaster')
 
 @section('title', 'Add Product')
 
