@@ -34,7 +34,9 @@ RUN composer install --no-dev --optimize-autoloader --no-interaction --no-script
 
 # 9. Set correct permissions
 RUN chown -R www-data:www-data /var/www/html \
-    && chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache
+    && chmod -R 775 /var/www/html/storage \
+    && chmod -R 775 /var/www/html/bootstrap/cache \
+    && chmod -R 777 /var/www/html/storage/logs& chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache
 
 # 10. PHP settings
 RUN echo "memory_limit=256M" > /usr/local/etc/php/conf.d/memory-limit.ini
@@ -46,4 +48,4 @@ RUN php artisan storage:link || true
 EXPOSE 80
 
 # 13. Start container (with cache + key fix)
-CMD sh -c "php artisan key:generate || true && php artisan config:clear && php artisan config:cache && php artisan route:cache && php artisan view:cache && apache2-foreground"
+CMD sh -c "php artisan config:clear && php artisan cache:clear && php artisan key:generate || true && php artisan config:cache && php artisan route:cache && php artisan view:cache && apache2-foreground"
