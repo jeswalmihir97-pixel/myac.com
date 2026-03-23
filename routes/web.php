@@ -20,8 +20,9 @@ use App\Models\User;
 */
 
 Route::get('/', function () {
-    return view('svalue');
+    return redirect('/dashboard');
 });
+
 //login authinction 
 
 Route::get('/register', [AuthController::class, 'showRegister'])->name('login');
