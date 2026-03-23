@@ -36,8 +36,10 @@ RUN composer install --no-dev --optimize-autoloader --no-interaction --no-script
 RUN chown -R www-data:www-data /var/www/html \
     && chmod -R 775 /var/www/html/storage \
     && chmod -R 775 /var/www/html/bootstrap/cache \
-    && chmod -R 777 /var/www/html/storage/logs& chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache
-
+    && mkdir -p /var/www/html/storage/logs \
+    && touch /var/www/html/storage/logs/laravel.log \
+    && chmod -R 777 /var/www/html/storage \
+    && chmod -R 777 /var/www/html/bootstrap/cache
 # 10. PHP settings
 RUN echo "memory_limit=256M" > /usr/local/etc/php/conf.d/memory-limit.ini
 
